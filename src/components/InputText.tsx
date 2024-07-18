@@ -25,7 +25,7 @@ export const InputText = ({ fieldName, placeholder }: InputTextProps) => {
             : undefined
         }
         aria-describedby={`${fieldName}-helper`}
-        {...register("title")}
+        {...register(fieldName)}
       />
       {dirtyFields[fieldName] && errors[fieldName] && (
         <small id={`${fieldName}-helper`}>
